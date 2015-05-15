@@ -28,7 +28,7 @@ func (s *UsersService) GetSelf() (*User, error) {
 
 func (s *UsersService) get(url string) (*User, error) {
 	var user User
-	if err := s.client.httpGet(url, &user); err != nil {
+	if err := s.client.httpGet(url, nil, &user); err != nil {
 		return nil, err
 	}
 	return &user, nil

@@ -38,7 +38,7 @@ func (c *ChannelsService) Get(channel string) (*Channel, error) {
 
 func (c *ChannelsService) get(url string) (*Channel, error) {
 	var channel Channel
-	if err := c.client.httpGet(url, &channel); err != nil {
+	if err := c.client.httpGet(url, nil, &channel); err != nil {
 		return nil, err
 	}
 	return &channel, nil

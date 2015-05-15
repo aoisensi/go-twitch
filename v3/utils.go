@@ -13,3 +13,10 @@ func (e Error) Error() string {
 type service struct {
 	client *Client
 }
+
+type Preview struct {
+	Small    string `json:"small"`
+	Medium   string `json:"medium"`
+	Large    string `json:"large"`
+	Template string `json:"template"`
+}

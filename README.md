@@ -19,7 +19,7 @@ MIT
       - [ ] and other...
     - [ ] Chat
     - [ ] Follows
-    - [ ] Games
+    - [x] Games
     - [ ] Ingests
     - [ ] Search
     - [ ] Streams
@@ -31,3 +31,5 @@ MIT
       - [ ] FollowingStreams
       - [ ] FollowingChannels
     - [ ] Videos
+      - [x] Get
+      - [ ] other..

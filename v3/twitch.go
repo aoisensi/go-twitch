@@ -3,6 +3,7 @@ package twitch
 import (
 	"encoding/json"
 	"net/http"
+	"net/url"
 	"time"
 )
 
@@ -48,7 +49,10 @@ func NewClient(httpClient *http.Client) (*Client, error) {
 	return c, nil
 }
 
-func (c *Client) httpGet(url string, body interface{}) error {
+func (c *Client) httpGet(url string, params url.Values, body interface{}) error {
+	if params != nil {
+		url += "?" + params.Encode()
+	}
 	resp, err := c.client.Get(url)
 	if err != nil {
 		return err
